@@ -1,0 +1,64 @@
+.admin-status {
+  display: inline-flex;
+  min-height: 1.45rem;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.015em;
+}
+
+.admin-status[data-status='Pending'],
+.admin-status[data-status='New'] {
+  border-color: oklch(0.84 0.08 79 / 55%);
+  background: oklch(0.95 0.035 82);
+  color: oklch(0.43 0.08 65);
+}
+
+.admin-status[data-status='Confirmed'],
+.admin-status[data-status='Contacted'],
+.admin-status[data-status='Paid'] {
+  border-color: oklch(0.84 0.045 235 / 55%);
+  background: oklch(0.95 0.02 235);
+  color: oklch(0.43 0.065 235);
+}
+
+.admin-status[data-status='Preparing'],
+.admin-status[data-status='Quoted'] {
+  border-color: oklch(0.83 0.06 69 / 60%);
+  background: oklch(0.95 0.03 69);
+  color: oklch(0.45 0.075 60);
+}
+
+.admin-status[data-status='Ready for Pickup'],
+.admin-status[data-status='Out for Delivery'],
+.admin-status[data-status='Accepted'] {
+  border-color: oklch(0.83 0.055 150 / 55%);
+  background: oklch(0.95 0.025 150);
+  color: oklch(0.42 0.075 150);
+}
+
+.admin-status[data-status='Completed'] {
+  border-color: oklch(0.82 0.06 150 / 55%);
+  background: oklch(0.94 0.035 150);
+  color: oklch(0.38 0.09 150);
+}
+
+.admin-status[data-status='Cancelled'],
+.admin-status[data-status='Rejected'],
+.admin-status[data-status='Failed'] {
+  border-color: oklch(0.84 0.07 25 / 50%);
+  background: oklch(0.96 0.025 25);
+  color: oklch(0.48 0.12 25);
+}
+
+.admin-status[data-status='Refunded'] {
+  border-color: oklch(0.84 0.035 305 / 55%);
+  background: oklch(0.96 0.02 305);
+  color: oklch(0.45 0.06 305);
+}

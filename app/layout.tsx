@@ -2,9 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import { Toaster } from 'sonner'
-import { AnnouncementBar } from '@/components/site/announcement-bar'
-import { SiteHeader } from '@/components/site/site-header'
-import { SiteFooter } from '@/components/site/site-footer'
+import { SiteFrame } from '@/components/site/site-frame'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -56,10 +54,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <AnnouncementBar />
-        <SiteHeader />
-        <main id="main">{children}</main>
-        <SiteFooter />
+        <SiteFrame>{children}</SiteFrame>
         <Toaster
           position="bottom-center"
           toastOptions={{
